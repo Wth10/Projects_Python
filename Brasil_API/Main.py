@@ -66,7 +66,7 @@ def Menu():
     global O
     os.system("cls")
     print("### Brasil API ###\n")
-    print("[1] Lista Todos Os ancos Do Brasil")
+    print("[1] Lista Todos Os Bancos Do Brasil")
     print("[2] Busca Por CEP")
     print("[3] Busca Por CNPJ")
     print("[4] Lista Cidades Por DDD")
