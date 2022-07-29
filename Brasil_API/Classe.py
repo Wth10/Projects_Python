@@ -18,17 +18,6 @@ class CEp:
         self.street = street
         self.service = service
 
-    def print(self):
-        print(
-            f"\
-            CEP    | {self.cep}\n \
-            Estado | {self.state}\n \
-            Cidade | {self.city}\n \
-            Região | {self.neighborhood}\n\
-            Rua    | {self.street}\n \
-            Serviço| {self.service}"
-        )
-
 
 class CNPj:
     pass

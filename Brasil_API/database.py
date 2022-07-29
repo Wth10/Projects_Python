@@ -1,5 +1,6 @@
 import httpx
 from Classe import Bank
+from Classe import CEp
 
 url_base = "https://brasilapi.com.br/api/"
 
@@ -16,9 +17,21 @@ def getBanks():
 
 
 def getCEP(CEP):
+    list_CEP = []
     url = f"{url_base}cep/v1/{CEP}"
     res = Connection(url)
-    return res
+
+    new_CEP = CEp(
+        res["cep"],
+        res["state"],
+        res["city"],
+        res["neighborhood"],
+        res["street"],
+        res["service"],
+    )
+
+    list_CEP.append(new_CEP)
+    return list_CEP
 
 
 def getCNPJ(CNPJ):

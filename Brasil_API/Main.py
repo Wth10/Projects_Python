@@ -22,8 +22,10 @@ def CEP():
     list_CEP = database.getCEP(CEP)
     print("")
 
-    for key, value in list_CEP.items():
-        print(f"{key} | {value}")
+    for x in list_CEP:
+        print(
+            f"CEP: {x.cep}\nEstado: {x.state}\nCidade: {x.city}\nRegião: {x.neighborhood}\nRua: {x.street}\n"
+        )
 
 
 def CNPJ():
