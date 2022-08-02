@@ -24,7 +24,7 @@ def CEP():
 
     for x in list_CEP:
         print(
-            f"CEP: {x.cep}\nEstado: {x.state}\nCidade: {x.city}\nRegião: {x.neighborhood}\nRua: {x.street}\n"
+            f"CEP: {x.cep}\nEstado: {x.state}\nCidade: {x.city}\nServiço: {x.service}"
         )
 
 

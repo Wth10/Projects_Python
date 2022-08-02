@@ -10,12 +10,10 @@ class Bank:
 
 
 class CEp:
-    def __init__(self, cep, state, city, neighborhood, street, service) -> None:
+    def __init__(self, cep, state, city, service) -> None:
         self.cep = cep
         self.state = state
         self.city = city
-        self.neighborhood = neighborhood
-        self.street = street
         self.service = service
 
 

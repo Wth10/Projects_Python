@@ -25,8 +25,6 @@ def getCEP(CEP):
         res["cep"],
         res["state"],
         res["city"],
-        res["neighborhood"],
-        res["street"],
         res["service"],
     )
 

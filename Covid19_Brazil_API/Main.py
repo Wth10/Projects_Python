@@ -35,7 +35,7 @@ while O != 5:
         print("### Listar Casos Por Estados ###\n")
         uf = input("Digite Um Estado: ")
         state = database.getUf(uf)
-
+        print("")
         for key, value in state.items():
             print(f"{key}: {value}")
 

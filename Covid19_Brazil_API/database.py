@@ -8,7 +8,6 @@ def getAll():
 
 
 def getUf(uf: str):
-    print("TESTANDO CASOS POR ESTADO")
     url = f"{url_base}/brazil/uf/{uf}"
     data = connectionApi(url)
     return data
