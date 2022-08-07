@@ -26,7 +26,7 @@ ObjEmployee.Add(D4)
 # Criar Prato
 D1 = Dish("Pizza Pequena", "Ótima", 35)
 D2 = Dish("Pizza Grande", "Ótima", 45)
-D3 = Dish("Pastel", "Frango", 4)
+D3 = Dish("Pastel", "Frango", 4.5)
 D4 = Dish("Suco", "Fruta", 2)
 
 # Adicionndo Prato
@@ -190,7 +190,7 @@ def dish_management():
                 print("=-==-=-=-=-=-=-= Informe Os Dados =-==-=-=-=-=-=-= \n")
                 Name = str(input("Nome: "))
                 Description = str(input("Descrição: "))
-                Price = int(input("Preço: "))
+                Price = float(input("Preço: "))
                 print("")
                 new_dish = Dish(Name, Description, Price)
                 ObjDish.Add(new_dish)
@@ -323,7 +323,15 @@ def financial_management():
                 input("\nAperte 'Enter' Para Voltar\n")
                 financial_management()
             elif X == 2:
-                print("SEM LUCRO")
+                os.system("cls")
+                print("============== Vendas & Receita ==============\n")
+                list_Sales = ObjSales.getShow()
+                w = len(list_Sales)
+                print(f"Total De Vendas: {w}\n")
+                for x in range(0, len(list_Sales)):
+                    v = list_Sales[x - 1].getPrice_Prato()
+                    print(f"Cod: {x + 1} | Lucro Total: {v}")
+                print(f"\nLucro Total: {v * w}")
                 input("\nAperte 'Enter' Para Voltar\n")
                 financial_management()
             elif X == 3:
